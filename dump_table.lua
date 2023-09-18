@@ -66,7 +66,7 @@ M.dump = function(t, i)
         ret[#ret + 1] = indent .. k .. assignment .. v .. separator
         ::cont::
     end
-    table.insert(ret, "}")
+    ret[#ret + 1] = "}"
     return table.concat(ret, newline .. indent:rep(i))
 end
 
